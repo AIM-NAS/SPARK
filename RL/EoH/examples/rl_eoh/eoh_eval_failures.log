@@ -1,0 +1,880 @@
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp3ivn1uwn/candidate_program.py", line 23, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 32])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpeav4zkb8/candidate_program.py", line 23, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 32])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpcdeqaaiw/candidate_program.py", line 23, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp6nlei9q0/candidate_program.py", line 23, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp9dgq60p2/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmps1hqjkla/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpwiyypx4w/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp1hftd0lm/candidate_program.py", line 25, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpouxx9c9v/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpbai0iocs/candidate_program.py", line 24, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpd1r9ho4e/candidate_program.py", line 25, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpsd29kuzy/candidate_program.py", line 25, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpcagvuv27/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpijiceg55/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp366pswr0/candidate_program.py", line 25, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpkotkj2cu/candidate_program.py", line 25, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp4txog2k9/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp0fop0s0c/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp6h_m4s8m/candidate_program.py", line 25, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 16])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpdmbjuqjc/candidate_program.py", line 25, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 16])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmpaagxenvs/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+
+
+================================================================================
+[PROB] exception in evaluate()
+ValueError('Expected more than 1 value per channel when training, got input size torch.Size([1, 24])')
+Traceback (most recent call last):
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/prob.py", line 132, in evaluate
+    result = self.evaluator.evaluate(str(candidate_path))
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 382, in evaluate
+    return evaluate_stage2(program_path)
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in evaluate_stage2
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 324, in <listcomp>
+    per_seed = [train_and_evaluate_one_seed(program_path, seed) for seed in EVAL_SEEDS]
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 249, in train_and_evaluate_one_seed
+    train_ret = run_episode(
+  File "/data1/lz/clrs/openevolve/RL/EoH/examples/rl_eoh/evaluator.py", line 203, in run_episode
+    logits = model(x)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/tmp3h9w9i19/candidate_program.py", line 26, in forward
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 194, in forward
+    return F.batch_norm(
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "/data1/lz/anaconda/yes/envs/eoh/lib/python3.10/site-packages/torch/nn/functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 24])
+

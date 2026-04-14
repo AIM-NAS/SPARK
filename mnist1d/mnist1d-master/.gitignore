@@ -1,0 +1,18 @@
+# The MNIST-1D dataset | 2020
+# Sam Greydanus
+
+.DS_Store
+*.egg-info
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.pytest_cache
+*.tar
+*.zip
+notebooks/*.pkl
+notebooks/mnist1d
+# *.pkl # allow pickle files
+__pycache__
+.vscode
+*~
+
+dist/*
