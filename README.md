@@ -106,7 +106,11 @@ The current codebase is organized as follows:
 
 ```bash
 git clone https://github.com/AIM-NAS/SPARK.git
+<<<<<<< HEAD
 cd <SPARK>
+=======
+cd <your-repo>
+>>>>>>> a9359cb92058708f5500d0120df87c665b360a72
 ```
 
 ### 2. Create environment
