@@ -1,77 +1,18 @@
 # SPARK: Structured Progressive Knowledge Activation for LLM-Driven Neural Architecture Search
 
-<p align="center">
-  <b>Factor-scoped LLM-driven neural architecture search for reliable program evolution</b>
-</p>
 
-<p align="center">
-  <a href="#overview">Overview</a> •
-  <a href="#method">Method</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#results">Results</a> •
-  <a href="#citation">Citation</a>
-</p>
 
----
 
-## Overview
+This repository is the official implementation of SPARK.
 
-This repository contains the official implementation of **SPARK** (**S**tructured **P**rogressive **A**ctivation of **R**elevant **K**nowledge), a structure-guided editing framework for **LLM-driven Neural Architecture Search (NAS)**.
 
-LLM-based architecture search can generate executable model code directly, but free-form code rewriting often modifies multiple architectural factors at once. In NAS programs, this can lead to **functional entanglement**: a single edit may simultaneously change *which operator is used* and *how the operator is invoked or wired*, causing unpredictable behavior, invalid candidates, or unstable performance.
+## 🗞️ Release Notes
+- [2026/04/23] 🚀 We’re thrilled to release the SPARK! The code is now open to the community.
+<!-- - [2026/01/27] 🎉 UME-R1 has been accepted to ICLR 2026! -->
 
-SPARK addresses this issue by converting free-form architecture rewriting into a **where-then-how** editing process:
 
-1. **Where to edit**: select an explicit architectural factor, such as `OPERATOR` or `ACTION`.
-2. **How to edit**: generate a factor-conditioned code patch only inside the selected region.
-3. **What to keep fixed**: freeze all non-selected regions and public training/evaluation interfaces.
 
-This repository builds on the OpenEvolve-style evolutionary coding pipeline and adapts it to program-structured NAS on the CLRS algorithmic reasoning benchmark.
 
----
-
-## Highlights
-
-- **Factor-scoped LLM editing**: decomposes architecture evolution into `OPERATOR` and `ACTION` factors.
-- **ASR + RC + SAR pipeline**:
-  - `ASR`: Architecture Scope Router, selects the target edit scope.
-  - `RC`: Refinement Compass, converts search feedback into a scope-local directive.
-  - `SAR`: Scoped Architecture Refiner, generates a constrained code patch.
-- **Factor-respecting feasibility checks**: rejects proposals that modify frozen regions, break interfaces, or violate tensor-shape/masking constraints.
-- **OpenEvolve-compatible search backbone**: uses archive-based evolutionary search with elite/diverse candidate sampling.
-- **CLRS NAS evaluation**: searches on DFS and transfers the best architecture to other CLRS tasks.
-
----
-
-## Method
-
-SPARK treats each candidate architecture as an executable Python program. Each evolution step is factorized as:
-
-```text
-f_t       = ASR(a_t, H_t)          # choose edit factor: OPERATOR or ACTION
-d_t       = RC(a_t, f_t, H_t)      # generate refinement directive under the factor
-a_{t+1}   = SAR(a_t, f_t, d_t, H_t)# produce factor-conditioned code patch
-```
-
-where:
-
-- `a_t` is the parent architecture program;
-- `H_t` is the evolution context, including parent code, recent outcomes, and archive examples;
-- `f_t` is the selected functional factor;
-- `d_t` is the refinement directive;
-- `a_{t+1}` is the proposed offspring architecture.
-
-In the CLRS implementation, the editable architecture is split into two disjoint factors:
-
-| Factor | Meaning | Typical edits |
-|---|---|---|
-| `OPERATOR` | What computation modules are defined | projections, gates, residual blocks, message operators |
-| `ACTION` | How modules are invoked and composed | message construction, masking, routing, aggregation, control flow |
-
-The feasibility checker accepts a proposal only when the code diff is local to the selected factor and the frozen regions remain unchanged.
-
----
 
 ## Repository Structure
 
@@ -98,7 +39,6 @@ The current codebase is organized as follows:
 └── process_parallel.py     # Parallel evaluation / process management utilities
 ```
 
----
 
 ## Installation
 
@@ -106,11 +46,7 @@ The current codebase is organized as follows:
 
 ```bash
 git clone https://github.com/AIM-NAS/SPARK.git
-<<<<<<< HEAD
-cd <SPARK>
-=======
-cd <your-repo>
->>>>>>> a9359cb92058708f5500d0120df87c665b360a72
+cd SPARK
 ```
 
 ### 2. Create environment
@@ -147,7 +83,7 @@ llm:
 
 Do **not** commit API keys to GitHub.
 
----
+
 
 ## Quick Start
 
@@ -173,7 +109,7 @@ A typical run will:
 7. train and evaluate valid candidates with `evaluator.py`;
 8. update the archive if the candidate improves fitness.
 
----
+
 
 ## Running Multiple Seeds
 
@@ -189,7 +125,7 @@ for seed in 0 1 2 3 4; do
 done
 ```
 
----
+
 
 ## Configuration
 
@@ -217,7 +153,7 @@ spark:
 
 The exact fields may differ depending on your local branch. Please check `config.py` and `config.yaml` for the final supported options.
 
----
+
 
 ## Factor-Scoped Region Markers
 
@@ -235,7 +171,7 @@ The exact fields may differ depending on your local branch. Please check `config
 
 During SPARK evolution, if ASR selects `OPERATOR`, SAR should only modify the operator region. If ASR selects `ACTION`, SAR should only modify the action region. Changes outside the selected region are rejected before full evaluation.
 
----
+
 
 ## Results
 
@@ -267,7 +203,7 @@ After searching on DFS, the best architecture is transferred to 9 additional CLR
 
 The results suggest that the improvement mainly comes from more reliable search dynamics and reduced functional entanglement, rather than simply increasing model size or compute.
 
----
+
 
 ## Ablation
 
@@ -282,7 +218,7 @@ The results suggest that the improvement mainly comes from more reliable search 
 
 These results show that both scope selection and scope-local refinement are useful, while their combination gives the strongest and most stable improvement.
 
----
+
 
 ## Logs and Outputs
 
@@ -306,7 +242,7 @@ Useful quantities to track include:
 - `entanglement_rate`: fraction of non-factor-local edits;
 - `best_so_far`: best archived architecture score over iterations.
 
----
+
 
 ## Reproducing Main Experiments
 
@@ -327,7 +263,12 @@ python openevolve-run.py initial_program.py evaluator.py \
 
 The exact aggregation script depends on your local evaluator implementation. Please refer to the scripts under `utils/` or your experiment-specific parsing scripts.
 
----
+
+
+
+## 🤝 Acknowledgements
+
+We would like to express our sincere gratitude to [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) for providing open-source resources that contributed to the development of this project.
 
 ## Citation
 
@@ -342,25 +283,3 @@ If you find this repository useful, please cite:
 }
 ```
 
-This repository also builds on OpenEvolve. Please consider citing or acknowledging the upstream project:
-
-```bibtex
-@misc{sharma2025openevolve,
-  title        = {OpenEvolve: An Open-Source Evolutionary Coding Agent},
-  author       = {Sharma, A.},
-  year         = {2025},
-  howpublished = {\url{https://github.com/algorithmicsuperintelligence/openevolve}}
-}
-```
-
----
-
-## Acknowledgements
-
-This project is inspired by recent progress in LLM-driven code optimization, evolutionary program search, and neural architecture search. The implementation is adapted from the OpenEvolve-style evolutionary coding framework and extended with SPARK's factor-scoped architecture editing modules.
-
----
-
-## License
-
-Please refer to `LICENSE` for licensing information. If this repository is derived from OpenEvolve, make sure the upstream license and attribution requirements are preserved.
