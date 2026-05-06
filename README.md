@@ -8,7 +8,7 @@ This repository is the official implementation of SPARK.
 
 ## 🗞️ Release Notes
 - [2026/04/23] 🚀 We’re thrilled to release the SPARK! The code is now open to the community.
-<!-- - [2026/01/27] 🎉 UME-R1 has been accepted to ICLR 2026! -->
+- [2026/05/1] 🎉 SPARK has been accepted to ICML 2026!
 
 
 
