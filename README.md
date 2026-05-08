@@ -4,6 +4,7 @@
 
 
 This repository is the official implementation of SPARK.
+
 [📄 Paper](https://arxiv.org/abs/2605.04057)
 
 ## 🗞️ Release Notes
