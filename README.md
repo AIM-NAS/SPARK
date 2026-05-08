@@ -4,11 +4,12 @@
 
 
 This repository is the official implementation of SPARK.
-
+[📄 Paper](https://arxiv.org/abs/2605.04057)
 
 ## 🗞️ Release Notes
-- [2026/04/23] 🚀 We’re thrilled to release the SPARK! The code is now open to the community.
+- [2026/04/23] 🚀 We’re thrilled to release the SPARK! The paper, code is now open to the community.
 - [2026/05/01] 🎉 SPARK has been accepted to ICML 2026!
+- 
 
 
 
@@ -275,11 +276,14 @@ We would like to express our sincere gratitude to [OpenEvolve](https://github.co
 If you find this repository useful, please cite:
 
 ```bibtex
-@article{liu2026spark,
-  title   = {Structured Progressive Knowledge Activation for LLM-Driven Neural Architecture Search},
-  author  = {Liu, Zhen and Liu, Yuhan and Fu, Jingwen},
-  journal = {Preprint},
-  year    = {2026}
+@misc{liu2026structuredprogressiveknowledgeactivation,
+      title={Structured Progressive Knowledge Activation for LLM-Driven Neural Architecture Search}, 
+      author={Zhen Liu and Yuhan Liu and Jinjun Wang and Wei Song and Jianyi Liu and Jingwen Fu},
+      year={2026},
+      eprint={2605.04057},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.04057}, 
 }
 ```
 
